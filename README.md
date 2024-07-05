@@ -1,0 +1,1 @@
+# Here we will be learning JavaScript with projects!
