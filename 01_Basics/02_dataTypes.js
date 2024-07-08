@@ -7,7 +7,7 @@ let isLoggedIn = true //boolean dataType
 
 /*PRIMITIVE DATA TYPES*/
 
-//numner => ranges from 2 to the power 53
+//number => ranges from 2 to the power 53
 //bigint => used for very high numbers in stock market or facebook
 //string => can be used in "write_string" or 'write_string'
 //boolean => true/false
