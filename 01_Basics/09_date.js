@@ -81,4 +81,4 @@ newDate.toLocaleString('default', {
     month : 'long'
 })
 
-//similarly we can change the date & make it visible on frontend as per our need.
+//similarly we can change/customize the date & make it visible on frontend as per our need.
