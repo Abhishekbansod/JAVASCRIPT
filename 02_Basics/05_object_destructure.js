@@ -32,12 +32,12 @@ console.log(validity);
 //API's are used to fetch the data from database
 
 //how does JSON looks 
-{
-    "name" : "abhishek",
-    "id" : 1307755,
-    "company" : "Infosys",
-    "experience" : "18 Months"
-}
+// {
+//     "name" : "abhishek",
+//     "id" : 1307755,
+//     "company" : "Infosys",
+//     "experience" : "18 Months"
+// }
 
 //JSON -> in Array format as well
 [
