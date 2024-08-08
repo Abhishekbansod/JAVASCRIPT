@@ -1,0 +1,42 @@
+<!-- How to create a new Element in JavaScript! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+    let div = document.createElement('div')
+    console.log(div);
+
+    //will add class, id in newly created div
+    div.className = "myClass"
+    div.id = Math.round(Math.random() * 10 + 1) //will randomly take the values
+    
+    //setting up the attributes like key and value
+    div.setAttribute("title", "creating new element")
+
+    //styling the div
+    div.style.backgroundColor = "green"
+    div.style.color = "yellow"
+    div.style.padding = "15px"
+    div.style.borderRadius = "15px"
+
+    //adding text to created div -> adding textNode to div
+    //first way
+    div.innerHTML = "Abhishek" 
+
+    //another way
+    let addText = document.createTextNode("Abhishek Bansod")
+    div.appendChild(addText)
+
+    //to display all these on browser we need to append this div to body
+    document.body.appendChild(div)
+
+</script>
+
+</html>
