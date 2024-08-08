@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>Java</li>
+    </ul>
+</body>
+
+<script>
+    //now we would like to add one more language in a list using function
+    //here DOM traversing will happen -> In smaller projects we can use this method 
+    //but in larger peojects it is not an ideal way to add elements
+    function addLanguage (languageName){
+        let li = document.createElement('li')
+        li.innerHTML = `${languageName}`
+
+        //append the create li with parent 
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("JavaScript")
+
+    //optimized code -> Ideal way to add 
+    function addLanguageOptimized(languageName){
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(languageName))
+
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguageOptimized("Python")
+    addLanguageOptimized("C++")
+
+    //EDIT
+    //how to edit the list/replace one list element with another
+    //will replace Javascript with Ruby
+    let secondLanguage = document.querySelector("li:nth-child(2)")
+    let newli = document.createElement('li')
+    newli.appendChild(document.createTextNode("Ruby"))
+    
+    //another way to append
+    //newli.textContent = "Ruby"
+    //newli.innerHTML = "Go"
+    secondLanguage.replaceWith(newli)
+
+    //EDIT
+    //replace Java(1st position) with Typescript
+    let firstLanguage = document.querySelector('li:nth-child(1)')
+    //let firstLanguage = document.querySelector('li:first-child') 
+    //firstLanguage.outerHTML = "<li>TypeScript</li>"
+
+    let newlist = document.createElement('li')
+    newlist.appendChild(document.createTextNode("TypeScript"))
+    firstLanguage.replaceWith(newlist)
+
+    //REMOVE
+    //removing the last language ie C++
+    let lastLanguage = document.querySelector("li:nth-child(4)") 
+    lastLanguage.remove()
+</script>
+
+</html>
