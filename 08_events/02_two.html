@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Language</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    //useCase of setTimeout -> After specific time/given time function will be implemented
+    //it will run only one time
+    setTimeout(function(){
+        console.log('Abhishek');    
+    }, 2000)
+
+
+    //another method to implement setTimeout
+    let sayMyName = function(){
+        console.log('Abhishek Bansod');   
+    }
+    setTimeout(sayMyName, 2000) //takes only reference of the method
+
+    // Changing the innerHTML inside the h1 tag from "Javascript Language" to "DSA Series"
+    let changeText = function(){
+        document.querySelector('h1').innerHTML = 'DSA Series'
+    }
+    // setTimeout(changeText, 3000)
+
+    //clearTimeout method -> it removes the applied setTimeout & reference should be passed here
+    let stopChangingName = setTimeout(changeText, 3000)
+    document.getElementById('stop').addEventListener('click', function(){
+        clearTimeout(stopChangingName) //it takes the reference of the setTimeout method
+        console.log('STOPPED!');
+    })
+</script>
+</html>
